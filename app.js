@@ -1,6 +1,6 @@
 let leads = [];
 
-const tbody = document.getElementById("tbody");
+const listEl = document.getElementById("list");
 const statsEl = document.getElementById("stats");
 const countEl = document.getElementById("count");
 const qEl = document.getElementById("q");
@@ -14,6 +14,13 @@ function esc(s) {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
+}
+
+function mailtoHref(row) {
+  const to = encodeURIComponent(row.email || "");
+  const subject = encodeURIComponent(row.subject || "");
+  const body = encodeURIComponent(row.outreach || "");
+  return `mailto:${to}?subject=${subject}&body=${body}`;
 }
 
 function filtered() {
@@ -33,6 +40,8 @@ function filtered() {
       row.phone,
       row.gap,
       row.country,
+      row.subject,
+      row.outreach,
     ]
       .join(" ")
       .toLowerCase();
@@ -58,31 +67,47 @@ function renderStats(rows) {
     .join("");
 }
 
-function renderTable(rows) {
+function renderList(rows) {
   countEl.textContent = `Showing ${rows.length} of ${leads.length} leads`;
 
-  tbody.innerHTML = rows
-    .map((r) => {
+  listEl.innerHTML = rows
+    .map((r, i) => {
       const pill = `<span class="pill ${esc(r.priority).toLowerCase()}">${esc(r.priority)}</span>`;
       const mail = String(r.email).includes("@")
         ? `<a class="mail" href="mailto:${esc(r.email)}">${esc(r.email)}</a>`
         : esc(r.email);
-      return `<tr class="${r.priority === "High" ? "high" : ""}">
-        <td><strong>${esc(r.name)}</strong></td>
-        <td>${esc(r.country)}</td>
-        <td>${esc(r.city)}</td>
-        <td>${esc(r.niche)}</td>
-        <td>${mail}</td>
-        <td>${esc(r.phone)}</td>
-        <td>${esc(r.gap)}</td>
-        <td>${pill}</td>
-      </tr>`;
+
+      return `<article class="lead-card ${r.priority === "High" ? "is-high" : ""}" data-index="${i}">
+        <div class="lead-meta">
+          <div class="lead-top">
+            <h2>${esc(r.name)}</h2>
+            ${pill}
+          </div>
+          <p class="lead-loc">${esc(r.niche)} · ${esc(r.city)} · ${esc(r.country)}</p>
+          <dl class="lead-facts">
+            <div><dt>To</dt><dd>${mail}</dd></div>
+            <div><dt>Phone</dt><dd>${esc(r.phone)}</dd></div>
+            <div><dt>Gap</dt><dd>${esc(r.gap)}</dd></div>
+          </dl>
+        </div>
+        <div class="lead-draft">
+          <div class="draft-head">
+            <span>Email to send</span>
+            <div class="draft-actions">
+              <button type="button" class="btn tiny" data-copy="${i}">Copy email</button>
+              <a class="btn tiny ghost" href="${mailtoHref(r)}">Open in mail</a>
+            </div>
+          </div>
+          <p class="draft-subject"><strong>Subject:</strong> ${esc(r.subject)}</p>
+          <pre class="draft-body">${esc(r.outreach)}</pre>
+        </div>
+      </article>`;
     })
     .join("");
 }
 
 function refresh() {
-  renderTable(filtered());
+  renderList(filtered());
 }
 
 function fillCountries() {
@@ -99,15 +124,32 @@ copyBtn.addEventListener("click", async () => {
   const emails = filtered()
     .map((r) => r.email)
     .filter((e) => String(e).includes("@"));
-  const text = emails.join("\n");
   try {
-    await navigator.clipboard.writeText(text);
+    await navigator.clipboard.writeText(emails.join("\n"));
     copyBtn.textContent = `Copied ${emails.length}`;
     setTimeout(() => {
-      copyBtn.textContent = "Copy visible emails";
+      copyBtn.textContent = "Copy visible addresses";
     }, 1600);
   } catch {
     copyBtn.textContent = "Copy failed";
+  }
+});
+
+listEl.addEventListener("click", async (e) => {
+  const btn = e.target.closest("[data-copy]");
+  if (!btn) return;
+  const rows = filtered();
+  const row = rows[Number(btn.dataset.copy)];
+  if (!row) return;
+  const text = `To: ${row.email}\nSubject: ${row.subject}\n\n${row.outreach}`;
+  try {
+    await navigator.clipboard.writeText(text);
+    btn.textContent = "Copied";
+    setTimeout(() => {
+      btn.textContent = "Copy email";
+    }, 1400);
+  } catch {
+    btn.textContent = "Failed";
   }
 });
 
