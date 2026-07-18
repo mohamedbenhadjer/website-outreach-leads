@@ -1,83 +1,102 @@
-let leads = [];
+(function () {
+  function ready(fn) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
+  }
 
-const listEl = document.getElementById("list");
-const statsEl = document.getElementById("stats");
-const countEl = document.getElementById("count");
-const qEl = document.getElementById("q");
-const countryEl = document.getElementById("country");
-const priorityEl = document.getElementById("priority");
-const copyBtn = document.getElementById("copyEmails");
+  ready(function () {
+    let leads = [];
 
-function esc(s) {
-  return String(s ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
-}
+    const listEl = document.getElementById("list");
+    const statsEl = document.getElementById("stats");
+    const countEl = document.getElementById("count");
+    const qEl = document.getElementById("q");
+    const countryEl = document.getElementById("country");
+    const priorityEl = document.getElementById("priority");
+    const copyBtn = document.getElementById("copyEmails");
 
-function mailtoHref(row) {
-  const to = encodeURIComponent(row.email || "");
-  const subject = encodeURIComponent(row.subject || "");
-  const body = encodeURIComponent(row.outreach || "");
-  return `mailto:${to}?subject=${subject}&body=${body}`;
-}
+    if (!listEl || !statsEl || !countEl || !qEl || !countryEl || !priorityEl) {
+      console.error("Page markup is out of date. Hard-refresh (Ctrl+Shift+R).");
+      if (countEl) {
+        countEl.textContent =
+          "Page failed to load controls. Hard-refresh this page (Ctrl+Shift+R).";
+      }
+      return;
+    }
 
-function filtered() {
-  const q = qEl.value.trim().toLowerCase();
-  const country = countryEl.value;
-  const priority = priorityEl.value;
+    function esc(s) {
+      return String(s ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;");
+    }
 
-  return leads.filter((row) => {
-    if (country && row.country !== country) return false;
-    if (priority && row.priority !== priority) return false;
-    if (!q) return true;
-    const hay = [
-      row.name,
-      row.city,
-      row.niche,
-      row.email,
-      row.phone,
-      row.gap,
-      row.country,
-      row.subject,
-      row.outreach,
-    ]
-      .join(" ")
-      .toLowerCase();
-    return hay.includes(q);
-  });
-}
+    function mailtoHref(row) {
+      const to = encodeURIComponent(row.email || "");
+      const subject = encodeURIComponent(row.subject || "");
+      const body = encodeURIComponent(row.outreach || "");
+      return `mailto:${to}?subject=${subject}&body=${body}`;
+    }
 
-function renderStats(rows) {
-  const countries = new Set(rows.map((r) => r.country)).size;
-  const high = rows.filter((r) => r.priority === "High").length;
-  const emails = rows.filter((r) => String(r.email).includes("@")).length;
+    function filtered() {
+      const q = qEl.value.trim().toLowerCase();
+      const country = countryEl.value;
+      const priority = priorityEl.value;
 
-  statsEl.innerHTML = [
-    ["Prospects", rows.length],
-    ["With email", emails],
-    ["High priority", high],
-    ["Countries", countries],
-  ]
-    .map(
-      ([label, value]) =>
-        `<div class="stat"><strong>${value}</strong><span>${label}</span></div>`,
-    )
-    .join("");
-}
+      return leads.filter((row) => {
+        if (country && row.country !== country) return false;
+        if (priority && row.priority !== priority) return false;
+        if (!q) return true;
+        const hay = [
+          row.name,
+          row.city,
+          row.niche,
+          row.email,
+          row.phone,
+          row.gap,
+          row.country,
+          row.subject,
+          row.outreach,
+        ]
+          .join(" ")
+          .toLowerCase();
+        return hay.includes(q);
+      });
+    }
 
-function renderList(rows) {
-  countEl.textContent = `Showing ${rows.length} of ${leads.length} leads`;
+    function renderStats(rows) {
+      const countries = new Set(rows.map((r) => r.country)).size;
+      const high = rows.filter((r) => r.priority === "High").length;
+      const emails = rows.filter((r) => String(r.email).includes("@")).length;
 
-  listEl.innerHTML = rows
-    .map((r, i) => {
-      const pill = `<span class="pill ${esc(r.priority).toLowerCase()}">${esc(r.priority)}</span>`;
-      const mail = String(r.email).includes("@")
-        ? `<a class="mail" href="mailto:${esc(r.email)}">${esc(r.email)}</a>`
-        : esc(r.email);
+      statsEl.innerHTML = [
+        ["Prospects", rows.length],
+        ["With email", emails],
+        ["High priority", high],
+        ["Countries", countries],
+      ]
+        .map(
+          ([label, value]) =>
+            `<div class="stat"><strong>${value}</strong><span>${label}</span></div>`,
+        )
+        .join("");
+    }
 
-      return `<article class="lead-card ${r.priority === "High" ? "is-high" : ""}" data-index="${i}">
+    function renderList(rows) {
+      countEl.textContent = `Showing ${rows.length} of ${leads.length} leads`;
+
+      listEl.innerHTML = rows
+        .map((r, i) => {
+          const pill = `<span class="pill ${esc(r.priority).toLowerCase()}">${esc(r.priority)}</span>`;
+          const mail = String(r.email).includes("@")
+            ? `<a class="mail" href="mailto:${esc(r.email)}">${esc(r.email)}</a>`
+            : esc(r.email);
+
+          return `<article class="lead-card ${r.priority === "High" ? "is-high" : ""}">
         <div class="lead-meta">
           <div class="lead-top">
             <h2>${esc(r.name)}</h2>
@@ -102,72 +121,76 @@ function renderList(rows) {
           <pre class="draft-body">${esc(r.outreach)}</pre>
         </div>
       </article>`;
-    })
-    .join("");
-}
+        })
+        .join("");
+    }
 
-function refresh() {
-  renderList(filtered());
-}
+    function refresh() {
+      renderList(filtered());
+    }
 
-function fillCountries() {
-  const countries = [...new Set(leads.map((r) => r.country))].sort();
-  for (const c of countries) {
-    const opt = document.createElement("option");
-    opt.value = c;
-    opt.textContent = c;
-    countryEl.appendChild(opt);
-  }
-}
+    function fillCountries() {
+      const countries = [...new Set(leads.map((r) => r.country))].sort();
+      for (const c of countries) {
+        const opt = document.createElement("option");
+        opt.value = c;
+        opt.textContent = c;
+        countryEl.appendChild(opt);
+      }
+    }
 
-copyBtn.addEventListener("click", async () => {
-  const emails = filtered()
-    .map((r) => r.email)
-    .filter((e) => String(e).includes("@"));
-  try {
-    await navigator.clipboard.writeText(emails.join("\n"));
-    copyBtn.textContent = `Copied ${emails.length}`;
-    setTimeout(() => {
-      copyBtn.textContent = "Copy visible addresses";
-    }, 1600);
-  } catch {
-    copyBtn.textContent = "Copy failed";
-  }
-});
+    if (copyBtn) {
+      copyBtn.addEventListener("click", async () => {
+        const emails = filtered()
+          .map((r) => r.email)
+          .filter((e) => String(e).includes("@"));
+        try {
+          await navigator.clipboard.writeText(emails.join("\n"));
+          copyBtn.textContent = `Copied ${emails.length}`;
+          setTimeout(() => {
+            copyBtn.textContent = "Copy visible addresses";
+          }, 1600);
+        } catch {
+          copyBtn.textContent = "Copy failed";
+        }
+      });
+    }
 
-listEl.addEventListener("click", async (e) => {
-  const btn = e.target.closest("[data-copy]");
-  if (!btn) return;
-  const rows = filtered();
-  const row = rows[Number(btn.dataset.copy)];
-  if (!row) return;
-  const text = `To: ${row.email}\nSubject: ${row.subject}\n\n${row.outreach}`;
-  try {
-    await navigator.clipboard.writeText(text);
-    btn.textContent = "Copied";
-    setTimeout(() => {
-      btn.textContent = "Copy email";
-    }, 1400);
-  } catch {
-    btn.textContent = "Failed";
-  }
-});
+    listEl.addEventListener("click", async (e) => {
+      const btn = e.target.closest("[data-copy]");
+      if (!btn) return;
+      const rows = filtered();
+      const row = rows[Number(btn.dataset.copy)];
+      if (!row) return;
+      const text = `To: ${row.email}\nSubject: ${row.subject}\n\n${row.outreach}`;
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = "Copied";
+        setTimeout(() => {
+          btn.textContent = "Copy email";
+        }, 1400);
+      } catch {
+        btn.textContent = "Failed";
+      }
+    });
 
-qEl.addEventListener("input", refresh);
-countryEl.addEventListener("change", refresh);
-priorityEl.addEventListener("change", refresh);
+    qEl.addEventListener("input", refresh);
+    countryEl.addEventListener("change", refresh);
+    priorityEl.addEventListener("change", refresh);
 
-fetch("leads.json")
-  .then((r) => {
-    if (!r.ok) throw new Error("Failed to load leads.json");
-    return r.json();
-  })
-  .then((data) => {
-    leads = data;
-    fillCountries();
-    renderStats(leads);
-    refresh();
-  })
-  .catch((err) => {
-    countEl.textContent = String(err.message || err);
+    fetch(`leads.json?v=2`)
+      .then((r) => {
+        if (!r.ok) throw new Error("Failed to load leads.json");
+        return r.json();
+      })
+      .then((data) => {
+        leads = Array.isArray(data) ? data : [];
+        fillCountries();
+        renderStats(leads);
+        refresh();
+      })
+      .catch((err) => {
+        countEl.textContent = String(err.message || err);
+      });
   });
+})();
