@@ -1,0 +1,542 @@
+[
+  {
+    "name": "Plumb Perfexion Plumbing and Heating",
+    "country": "Canada",
+    "city": "Petersfield, MB",
+    "niche": "Plumbing / heating",
+    "email": "plumbperfexionmb@gmail.com",
+    "phone": "+1 204-898-2301",
+    "gap": "Facebook-only (no real website)",
+    "priority": "High"
+  },
+  {
+    "name": "Shears of Glory Hair Salon",
+    "country": "Canada",
+    "city": "Winnipeg Beach, MB",
+    "niche": "Hair salon",
+    "email": "shearsofgloryhairsalon@gmail.com",
+    "phone": "+1 204-998-7711",
+    "gap": "Facebook-only storefront",
+    "priority": "High"
+  },
+  {
+    "name": "Keepin' It Clean",
+    "country": "Canada",
+    "city": "Winnipeg Beach, MB",
+    "niche": "Cleaning",
+    "email": "shawna.leflar@gmail.com",
+    "phone": "+1 204-641-2020",
+    "gap": "Directory listing — no website field",
+    "priority": "High"
+  },
+  {
+    "name": "1st Rate Plumbing",
+    "country": "Canada",
+    "city": "Gimli, MB",
+    "niche": "Plumbing",
+    "email": "spoworski@hotmail.com",
+    "phone": "+1 204-886-0143",
+    "gap": "Municipal directory — no website",
+    "priority": "High"
+  },
+  {
+    "name": "Northland Plumbing",
+    "country": "Canada",
+    "city": "Gimli, MB",
+    "niche": "Plumbing",
+    "email": "dkushnir@mymts.net",
+    "phone": "+1 204-642-5369",
+    "gap": "No website on town directory",
+    "priority": "High"
+  },
+  {
+    "name": "Harris HVAC MB",
+    "country": "Canada",
+    "city": "Winnipeg Beach area, MB",
+    "niche": "HVAC",
+    "email": "harrishvacmb@gmail.com",
+    "phone": "+1 204-509-4589",
+    "gap": "Email + phone only",
+    "priority": "High"
+  },
+  {
+    "name": "Lakeview Electric",
+    "country": "Canada",
+    "city": "Winnipeg Beach area, MB",
+    "niche": "Electrician",
+    "email": "lakeviewelectric@gmail.com",
+    "phone": "+1 204-642-4046",
+    "gap": "No website listed",
+    "priority": "High"
+  },
+  {
+    "name": "Silver Brush Painting",
+    "country": "Canada",
+    "city": "Winnipeg Beach, MB",
+    "niche": "Painting",
+    "email": "silverbrushpaintingcom@gmail.com",
+    "phone": "+1 204-955-6928",
+    "gap": "No website",
+    "priority": "Medium"
+  },
+  {
+    "name": "Silverfox Restorations & Renovations",
+    "country": "Canada",
+    "city": "Winnipeg Beach, MB",
+    "niche": "Renovations",
+    "email": "silverfoxrestorations@gmail.com",
+    "phone": "+1 204-371-2870",
+    "gap": "No website",
+    "priority": "Medium"
+  },
+  {
+    "name": "Kevin Ford Construction",
+    "country": "Canada",
+    "city": "Winnipeg Beach, MB",
+    "niche": "Construction",
+    "email": "Kevinfordconstruction@gmail.com",
+    "phone": "+1 204-641-3911",
+    "gap": "No website",
+    "priority": "Medium"
+  },
+  {
+    "name": "Bill Paterson Renovations & Handyman",
+    "country": "Canada",
+    "city": "Winnipeg Beach area, MB",
+    "niche": "Handyman",
+    "email": "bill.paterson22@gmail.com",
+    "phone": "+1 204-389-6690",
+    "gap": "No website",
+    "priority": "Medium"
+  },
+  {
+    "name": "All Star Environ",
+    "country": "Canada",
+    "city": "Winnipeg Beach area, MB",
+    "niche": "Environmental / septic",
+    "email": "allstarenviron@gmail.com",
+    "phone": "+1 204-738-2336",
+    "gap": "No website",
+    "priority": "Medium"
+  },
+  {
+    "name": "Johnee's Restaurant",
+    "country": "Canada",
+    "city": "Winnipeg Beach, MB",
+    "niche": "Restaurant",
+    "email": "smaizys@mts.net",
+    "phone": "+1 204-389-4234",
+    "gap": "Directory email — no owned site listed",
+    "priority": "Medium"
+  },
+  {
+    "name": "COKO Cleaning Company",
+    "country": "Canada",
+    "city": "Melfort, SK",
+    "niche": "Cleaning",
+    "email": "carladklan@gmail.com",
+    "phone": "+1 306-921-7366",
+    "gap": "Town directory — no website",
+    "priority": "High"
+  },
+  {
+    "name": "ASA SK Services",
+    "country": "Canada",
+    "city": "Melfort, SK",
+    "niche": "Local services",
+    "email": "asaskservices@gmail.com",
+    "phone": "+1 306-873-9965",
+    "gap": "Google Sites only (weak)",
+    "priority": "Medium"
+  },
+  {
+    "name": "Cindy Perrot Yoga",
+    "country": "Canada",
+    "city": "Melfort, SK",
+    "niche": "Fitness / coach",
+    "email": "cindyperrotyoga@gmail.com",
+    "phone": "+1 306-921-5933",
+    "gap": "Facebook search link only",
+    "priority": "Medium"
+  },
+  {
+    "name": "Builds by Todd",
+    "country": "Canada",
+    "city": "Melfort, SK",
+    "niche": "Construction",
+    "email": "buildsbytodd@gmail.com",
+    "phone": "+1 306-921-4213",
+    "gap": "No website on directory",
+    "priority": "Medium"
+  },
+  {
+    "name": "Belljax Electric",
+    "country": "Canada",
+    "city": "Melfort, SK",
+    "niche": "Electrician",
+    "email": "Belljaxelectric@outlook.com",
+    "phone": "+1 306-420-9935",
+    "gap": "No website",
+    "priority": "High"
+  },
+  {
+    "name": "Funky Fab Waxing and Nails",
+    "country": "Canada",
+    "city": "Warner, AB",
+    "niche": "Beauty / nails",
+    "email": "Leisapaltiel@gmail.com",
+    "phone": "+1 403-642-2520 / 403-393-8886",
+    "gap": "Email booking only — salon setting up",
+    "priority": "High"
+  },
+  {
+    "name": "Cheeseman Tech Solutions",
+    "country": "Canada",
+    "city": "Warner, AB",
+    "niche": "IT / computer repair",
+    "email": "ty.cheeseman@gmail.com",
+    "phone": "+1 403-837-4264",
+    "gap": "No website listed",
+    "priority": "High"
+  },
+  {
+    "name": "Smith's Mobile Tire",
+    "country": "Canada",
+    "city": "Warner, AB",
+    "niche": "Mobile tire service",
+    "email": "smithsmobiletire@hotmail.com",
+    "phone": "+1 403-929-4882",
+    "gap": "No website",
+    "priority": "Medium"
+  },
+  {
+    "name": "M.W.E Pest & Weed Control",
+    "country": "Canada",
+    "city": "Warner, AB",
+    "niche": "Pest control",
+    "email": "soulkeeper59@hotmail.com",
+    "phone": "+1 403-393-5575",
+    "gap": "No website",
+    "priority": "Medium"
+  },
+  {
+    "name": "36-4 Fuels",
+    "country": "Canada",
+    "city": "Warner, AB",
+    "niche": "Gas / fuel",
+    "email": "cardlock364fuels@hotmail.com",
+    "phone": "+1 403-642-7435",
+    "gap": "Facebook page only",
+    "priority": "Low"
+  },
+  {
+    "name": "GMT Outfitters Ltd",
+    "country": "Canada",
+    "city": "Warner, AB",
+    "niche": "Outdoor retail",
+    "email": "GMTOutfitters@hotmail.com",
+    "phone": "+1 403-642-2172",
+    "gap": "No website",
+    "priority": "Medium"
+  },
+  {
+    "name": "Pat O'Malley Tile / Auto Upholstery",
+    "country": "Canada",
+    "city": "Warner, AB",
+    "niche": "Tile / upholstery",
+    "email": "buickstate@hotmail.com",
+    "phone": "+1 519-521-2100",
+    "gap": "No website",
+    "priority": "Medium"
+  },
+  {
+    "name": "Precision Weld Industry",
+    "country": "Canada",
+    "city": "Warner, AB",
+    "niche": "Welding",
+    "email": "precisionwelds@yahoo.ca",
+    "phone": "+1 403-715-285",
+    "gap": "No website",
+    "priority": "Medium"
+  },
+  {
+    "name": "Montour Services (Craig Montour)",
+    "country": "USA",
+    "city": "Cecil, WI",
+    "niche": "Septic / plumbing",
+    "email": "montourseptic@gmail.com",
+    "phone": "+1 715-745-2613",
+    "gap": "County license list only — no site found",
+    "priority": "High"
+  },
+  {
+    "name": "Competitive Sewer & Water Inc.",
+    "country": "USA",
+    "city": "Pulaski, WI",
+    "niche": "Sewer / water",
+    "email": "cswapahnke@yahoo.com",
+    "phone": "+1 920-822-4573",
+    "gap": "County list — verify site before pitch",
+    "priority": "Medium"
+  },
+  {
+    "name": "Eastern Ridges Land Consulting (Travis Stuck)",
+    "country": "USA",
+    "city": "White Lake, WI",
+    "niche": "Soil testing",
+    "email": "stucktravis@gmail.com",
+    "phone": "+1 920-202-0689",
+    "gap": "Personal Gmail on county list",
+    "priority": "Medium"
+  },
+  {
+    "name": "Kempka Excavating",
+    "country": "USA",
+    "city": "Crivitz, WI",
+    "niche": "Excavating",
+    "email": "kempkaexcavating@gmail.com",
+    "phone": "+1 715-854-2245",
+    "gap": "Gmail on county list",
+    "priority": "Medium"
+  },
+  {
+    "name": "Star Environmental, Inc.",
+    "country": "USA",
+    "city": "Marathon, WI",
+    "niche": "Soil / environmental",
+    "email": "starenvironmental@hotmail.com",
+    "phone": "+1 715-443-6115",
+    "gap": "Hotmail on county lists — check if site exists",
+    "priority": "Medium"
+  },
+  {
+    "name": "Richard Teetzen (soil tester)",
+    "country": "USA",
+    "city": "Shawano, WI",
+    "niche": "Soil testing",
+    "email": "rltsoils@outlook.com",
+    "phone": "+1 715-853-6411",
+    "gap": "No website found",
+    "priority": "Medium"
+  },
+  {
+    "name": "ABC Septic",
+    "country": "USA",
+    "city": "Knapp, WI",
+    "niche": "Septic",
+    "email": "abcseptic@gmail.com",
+    "phone": "+1 715-505-7875",
+    "gap": "St. Croix County contact list",
+    "priority": "High"
+  },
+  {
+    "name": "Advanced Septic Solutions",
+    "country": "USA",
+    "city": "Bloomer, WI",
+    "niche": "Septic",
+    "email": "brownthunder84@gmail.com",
+    "phone": "+1 715-579-2856",
+    "gap": "County list email",
+    "priority": "High"
+  },
+  {
+    "name": "Parnell Septic System LLC",
+    "country": "USA",
+    "city": "Somerset, WI",
+    "niche": "Septic",
+    "email": "parnellseptic@gmail.com",
+    "phone": "+1 715-760-0485",
+    "gap": "County list — no site signal",
+    "priority": "High"
+  },
+  {
+    "name": "Turner Plumbing",
+    "country": "USA",
+    "city": "Spring Valley, WI",
+    "niche": "Plumbing",
+    "email": "turnerplbg@gmail.com",
+    "phone": "+1 715-307-1026",
+    "gap": "Gmail on county list",
+    "priority": "High"
+  },
+  {
+    "name": "Legendary Plumbing",
+    "country": "USA",
+    "city": "Menomonie, WI",
+    "niche": "Plumbing",
+    "email": "legendaryplumbing@yahoo.com",
+    "phone": "+1 715-505-2865",
+    "gap": "Yahoo on county list",
+    "priority": "High"
+  },
+  {
+    "name": "Mittlestadt Plumbing & Wells LLC",
+    "country": "USA",
+    "city": "Knapp, WI",
+    "niche": "Plumbing / wells",
+    "email": "mpwllc12@gmail.com",
+    "phone": "+1 715-308-3232",
+    "gap": "County list",
+    "priority": "Medium"
+  },
+  {
+    "name": "Helgeson Excavating",
+    "country": "USA",
+    "city": "Barnes, WI",
+    "niche": "Excavating",
+    "email": "helgesonbennie@gmail.com",
+    "phone": "+1 715-772-3278",
+    "gap": "County list",
+    "priority": "Medium"
+  },
+  {
+    "name": "Hawkins Soil Testing & Septic",
+    "country": "USA",
+    "city": "Luck, WI",
+    "niche": "Septic / soil",
+    "email": "thawk33@hotmail.com",
+    "phone": "+1 715-491-5388",
+    "gap": "Hotmail on county list",
+    "priority": "Medium"
+  },
+  {
+    "name": "K.O. Construction",
+    "country": "USA",
+    "city": "Osceola, WI",
+    "niche": "Construction",
+    "email": "kimoconnell56@yahoo.com",
+    "phone": "+1 715-381-7917",
+    "gap": "County list",
+    "priority": "Medium"
+  },
+  {
+    "name": "Lewis Bjork, LLC",
+    "country": "USA",
+    "city": "Menomonie, WI",
+    "niche": "Trades",
+    "email": "lewisbjorkllc@yahoo.com",
+    "phone": "+1 715-231-7375",
+    "gap": "County list",
+    "priority": "Medium"
+  },
+  {
+    "name": "Utgard Plumbing & Heating",
+    "country": "USA",
+    "city": "Amery, WI",
+    "niche": "Plumbing / heating",
+    "email": "joylarson77@yahoo.com",
+    "phone": "+1 715-760-0946",
+    "gap": "Yahoo on county list",
+    "priority": "Medium"
+  },
+  {
+    "name": "Dunstone Bros. Plumbing & Roofing",
+    "country": "Australia",
+    "city": "Maiden Gully, VIC",
+    "niche": "Plumbing / roofing",
+    "email": "dunstoneplumbing@gmail.com",
+    "phone": "+61 3 5446 1535",
+    "gap": "HD2 directory — website field empty / weak",
+    "priority": "High"
+  },
+  {
+    "name": "Africaine SARL (Rachid Jaoual)",
+    "country": "Morocco",
+    "city": "Casablanca / El Jadida",
+    "niche": "Plumbing / electrical",
+    "email": "africaine.sarl@gmail.com",
+    "phone": "+212 660-33-37-05 / 662-43-12-10",
+    "gap": "Old Weebly site — redesign candidate",
+    "priority": "High"
+  },
+  {
+    "name": "Ste Turki Chauffage et Plomberie (Habib Turki)",
+    "country": "Tunisia",
+    "city": "Hammamet",
+    "niche": "Heating / plumbing / pools",
+    "email": "tcp.traveaux@gmail.com",
+    "phone": "—",
+    "gap": "LinkedIn / Gmail — no strong owned site",
+    "priority": "High"
+  },
+  {
+    "name": "IDM Fluides Energies (Abdellatif Zaied)",
+    "country": "Tunisia",
+    "city": "Khiar, Nabeul",
+    "niche": "Plumbing / HVAC / pools",
+    "email": "idmfluides.energies@gmail.com",
+    "phone": "+216 52 455 441 / 22 249 757",
+    "gap": "Gmail + phone — verify site",
+    "priority": "High"
+  },
+  {
+    "name": "Plombier Blida SOS",
+    "country": "Algeria",
+    "city": "Blida",
+    "niche": "Plumbing",
+    "email": "plombier.blida.sos@gmail.com",
+    "phone": "+213 772 54 04 58",
+    "gap": "Ouedkniss / Algeriahome ads only",
+    "priority": "High"
+  },
+  {
+    "name": "Zahaf Nassereddine",
+    "country": "Algeria",
+    "city": "Blida",
+    "niche": "Plumbing",
+    "email": "zahafnasser474@gmail.com",
+    "phone": "+213 554 83 23 33",
+    "gap": "Directory only",
+    "priority": "High"
+  },
+  {
+    "name": "Sami — plombier chauffagiste",
+    "country": "Algeria",
+    "city": "Blida",
+    "niche": "Plumbing / heating",
+    "email": "sammina6773@gmail.com",
+    "phone": "+213 556 55 95 41",
+    "gap": "Directory only",
+    "priority": "High"
+  },
+  {
+    "name": "Islam Brazi",
+    "country": "Algeria",
+    "city": "Mouzaïa, Blida",
+    "niche": "Plumbing",
+    "email": "islam-lax@hotmail.fr",
+    "phone": "+213 778 24 19 35",
+    "gap": "Directory only",
+    "priority": "Medium"
+  },
+  {
+    "name": "Merabet (Omar)",
+    "country": "Algeria",
+    "city": "Blida",
+    "niche": "Plumbing",
+    "email": "omar_drogba25@hotmail.com",
+    "phone": "+213 770 54 34 81",
+    "gap": "Directory only",
+    "priority": "Medium"
+  },
+  {
+    "name": "Yahia Bey",
+    "country": "Algeria",
+    "city": "Blida",
+    "niche": "Plumbing",
+    "email": "plombier05558882919@hotmail.com",
+    "phone": "+213 558 88 29 19",
+    "gap": "Directory only",
+    "priority": "Medium"
+  },
+  {
+    "name": "Chauffage Belge (SiteW)",
+    "country": "Algeria",
+    "city": "Zaouia, Blida",
+    "niche": "Plumbing / heating",
+    "email": "maizi@hotmail.be",
+    "phone": "+213 552 13 51 50",
+    "gap": "Outdated SiteW builder page",
+    "priority": "High"
+  }
+]

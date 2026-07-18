@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Outreach Leads</title>
+  <meta name="description" content="International landing-page outreach leads with public emails — businesses with no website or weak online presence." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <header class="hero">
+    <p class="eyebrow">Outreach database · Jul 2026</p>
+    <h1>Website outreach leads</h1>
+    <p class="lede">
+      Local businesses with a public email and no real website
+      (or Facebook / Weebly / SiteW only). Built for pitching simple landing pages.
+    </p>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <main>
+    <section class="toolbar">
+      <label class="field">
+        <span>Search</span>
+        <input id="q" type="search" placeholder="Name, email, city…" autocomplete="off" />
+      </label>
+      <label class="field">
+        <span>Country</span>
+        <select id="country">
+          <option value="">All countries</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Priority</span>
+        <select id="priority">
+          <option value="">All</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+      </label>
+      <button type="button" class="btn" id="copyEmails">Copy visible emails</button>
+      <a class="btn ghost" href="leads.json" download>Download JSON</a>
+    </section>
+
+    <p class="count" id="count"></p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Business</th>
+            <th>Country</th>
+            <th>City</th>
+            <th>Niche</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Gap</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <section class="template">
+      <h2>Email template</h2>
+      <p class="subject"><strong>Subject:</strong> A simple page for [Business] in [City]</p>
+      <p>
+        Hi [Name], I found your listing online but no website — only phone / Facebook.
+        I build simple one-page sites for local trades (call + WhatsApp buttons, services, photos).
+        Happy to mock one up with your name so you can see it before deciding. Takes about a week. Interested?
+      </p>
+    </section>
+
+    <section class="note">
+      <h2>Before you email</h2>
+      <ul>
+        <li>Verify the address still works and they still lack a proper site.</li>
+        <li>Personalize — do not mass-blast Gmail.</li>
+        <li>Contacts come from public municipal directories, county license lists, LinkedIn, and ads.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Sources: municipal directories (Canada), WI county plumber lists (USA), HD2 (AU), LinkedIn Maghreb, Lkeria / Ouedkniss (DZ).</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
