@@ -178,7 +178,7 @@
     countryEl.addEventListener("change", refresh);
     priorityEl.addEventListener("change", refresh);
 
-    fetch(`leads.json?v=2`)
+    fetch(`leads.json?v=3`)
       .then((r) => {
         if (!r.ok) throw new Error("Failed to load leads.json");
         return r.json();
